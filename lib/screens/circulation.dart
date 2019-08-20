@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
-import 'look.dart';
-import 'listen.dart';
-import 'feel.dart';
-class Airway extends StatefulWidget {
-  static String id = "airway";
+import 'CListen.dart';
+import 'Clook.dart';
+import 'Cfeel.dart';
+class Circulation extends StatefulWidget {
+  static String id = "circulation";
   @override
-  _AirwayState createState() => _AirwayState();
+  CirculationState createState() => CirculationState ();
 }
 
-class _AirwayState extends State<Airway> {
+class  CirculationState extends State<Circulation> {
   @override
   Widget build(BuildContext context) {
     return
       Scaffold(
         appBar: AppBar(
-          title: Text("AIRWAY"),
+          title: Text("CListen"),
         ),
         body: ListView(
           children: <Widget>[
@@ -25,20 +25,20 @@ class _AirwayState extends State<Airway> {
                 Expanded(child: Btn(text: "Look",onPressed: (){
                   Navigator.push(context, new MaterialPageRoute(
                       builder: (context) =>
-                      new ALook())
+                      new CLook())
                   );
                 },)),
                 Expanded(child: Btn(text: "Listen",onPressed: (){
                   Navigator.push(context, new MaterialPageRoute(
                       builder: (context) =>
-                      new AListen())
+                      new CLook())
                   );
                 },)),
                 // SizedBox(width:18 ),
                 Expanded(child: Btn(text: "Feel",onPressed: (){
                   Navigator.push(context, new MaterialPageRoute(
                       builder: (context) =>
-                      new AFeel())
+                      new Cfeel())
                   );
                 },)),
               ],

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'screens/airway.dart';
+import 'screens/home.dart';
+import 'screens/circulation.dart';
+import 'screens/registration.dart';
+import 'screens/login.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,8 +28,14 @@ class MyApp extends StatelessWidget {
           body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
       ),
-      initialRoute: Airway.id,
-      routes: {Airway.id: (context) => Airway()},
+      initialRoute: LoginScreen.id,
+      routes: {
+        Airway.id: (context) => Airway(),
+        Home.id: (context) => Home(),
+        Circulation.id: (context) => Circulation(),
+        RegistrationScreen.id: (context) => RegistrationScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+      },
     );
   }
 }

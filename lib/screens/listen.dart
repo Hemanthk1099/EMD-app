@@ -35,7 +35,7 @@ List<List<bool>> intervention = [
   [false, false, false],
   [false, false, false],
 ];
-int i = 0;
+
 class _AListenState extends State<AListen> {
   @override
   Widget build(BuildContext context) {

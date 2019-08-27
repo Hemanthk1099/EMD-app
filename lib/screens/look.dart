@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
 import 'listen.dart';
 import 'feel.dart';
+import 'home.dart';
 
 bool swelling = false, deformity = false, injuries = false, others = false;
 bool secretions =false,vomiting =false,blood =false;
@@ -10,7 +11,7 @@ class ALook extends StatefulWidget {
   @override
   _ALookState createState() => _ALookState();
 }
-
+bool patency;
 bool use = false, fb = false, st = false;
 bool v1 = false, v2 =false, v3=false, v4=false;
 bool s1 =false, s2=false, s3=false, s4=false;
@@ -35,7 +36,7 @@ class _ALookState extends State<ALook> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Look"),
+        title: Text("Airway Look"),
       ),
       body: ListView(
         children: <Widget>[
@@ -78,6 +79,7 @@ class _ALookState extends State<ALook> {
                 onPressed: () {
                   setState(() {
                     use = false;
+                    patency = true;
                   });
                 },
               )),
@@ -696,6 +698,13 @@ class _ALookState extends State<ALook> {
 
                 ],
               )),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       ),
     );

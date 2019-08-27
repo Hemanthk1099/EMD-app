@@ -3,6 +3,7 @@ import 'package:test3/components/button.dart';
 import 'look.dart';
 import 'listen.dart';
 import 'feel.dart';
+import 'home.dart';
 class Airway extends StatefulWidget {
   static String id = "airway";
   @override
@@ -41,6 +42,13 @@ class _AirwayState extends State<Airway> {
                       new AFeel())
                   );
                 },)),
+                Btn(
+                  text: "Home",
+                  onPressed: () {
+                    Navigator.push(context,
+                        new MaterialPageRoute(builder: (context) => new Home()));
+                  },
+                )
               ],
             ),
           ],

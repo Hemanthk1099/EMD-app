@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
 import 'Blisten.dart';
 import 'Bfeel.dart';
+import 'home.dart';
 
 class Blook extends StatefulWidget {
   static String id = "airway";
@@ -45,7 +46,7 @@ class BlookState extends State<Blook> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("BREATHING LOOK"),
+        title: Text("Breathing Look"),
       ),
       body: ListView(
         children: <Widget>[
@@ -725,6 +726,13 @@ class BlookState extends State<Blook> {
               ],
             ),
           ),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       ),
     );

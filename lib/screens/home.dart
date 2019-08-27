@@ -3,6 +3,9 @@ import 'package:test3/components/button.dart';
 import 'airway.dart';
 import 'breathing.dart';
 import 'circulation.dart';
+import 'mews.dart';
+import 'disability.dart';
+import 'exposure.dart';
 
 class Home extends StatefulWidget {
   static String id = "home";
@@ -18,7 +21,7 @@ class _HomeState extends State<Home> {
         title: Text("Home"),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 200),
+        padding: EdgeInsets.symmetric(vertical: 160),
         child: ListView(
           children: <Widget>[
             Btn(
@@ -40,6 +43,28 @@ class _HomeState extends State<Home> {
                   new MaterialPageRoute(
                       builder: (context) => new Circulation()));
             },),
+            Btn(
+              text: "Disability",
+              onPressed: () {
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => new disability()));
+              },
+            ),
+            Btn(
+              text: "Exposure",
+              onPressed: () {
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => new exposure()));
+              },
+            ),
+            Btn(
+              text: "Mewscore",
+              onPressed: () {
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => new DisplayMews()));
+              },
+            ),
+
           ],
         ),
       ),

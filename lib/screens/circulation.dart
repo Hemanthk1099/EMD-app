@@ -3,6 +3,7 @@ import 'package:test3/components/button.dart';
 import 'CListen.dart';
 import 'Clook.dart';
 import 'Cfeel.dart';
+import 'home.dart';
 class Circulation extends StatefulWidget {
   static String id = "circulation";
   @override
@@ -43,6 +44,13 @@ class  CirculationState extends State<Circulation> {
                 },)),
               ],
             ),
+            Btn(
+              text: "Home",
+              onPressed: () {
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => new Home()));
+              },
+            )
           ],
         ),
       );

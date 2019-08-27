@@ -3,6 +3,7 @@ import 'package:test3/components/button.dart';
 import 'Blook.dart';
 import 'Blisten.dart';
 import 'Bfeel.dart';
+import 'home.dart';
 class Breathe extends StatefulWidget {
   static String id = "breathing";
   @override
@@ -15,7 +16,7 @@ class  BreatheState extends State<Breathe> {
     return
       Scaffold(
         appBar: AppBar(
-          title: Text("BREATHING"),
+          title: Text("Breathing"),
         ),
         body: ListView(
           children: <Widget>[
@@ -43,6 +44,13 @@ class  BreatheState extends State<Breathe> {
                 },)),
               ],
             ),
+            Btn(
+              text: "Home",
+              onPressed: () {
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => new Home()));
+              },
+            )
           ],
         ),
       );

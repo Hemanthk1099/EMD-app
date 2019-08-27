@@ -19,7 +19,7 @@ class  CLookState extends State<CLook> {
     return
       Scaffold(
         appBar: AppBar(
-          title: Text("CListen"),
+          title: Text("Circulatory Look"),
         ),
         body: ListView(
           children: <Widget>[

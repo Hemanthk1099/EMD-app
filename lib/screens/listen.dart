@@ -3,6 +3,7 @@ import 'package:test3/components/button.dart';
 import 'look.dart';
 import 'feel.dart';
 import 'package:test3/components/checkbox.dart';
+import 'home.dart';
 
 class AListen extends StatefulWidget {
   @override
@@ -41,7 +42,7 @@ class _AListenState extends State<AListen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Listen"),
+        title: Text("Airway Listen"),
       ),
       body: ListView(
         children: <Widget>[
@@ -857,98 +858,15 @@ class _AListenState extends State<AListen> {
               ],
             ),
           ),
-//      OutlineButton(onPressed: ()
-//         {
-//            setState(() {
-//              inUse=simple;
-//            });
-//         }),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       ),
     );
   }
 }
-
-/*
-class Intervention extends StatefulWidget {
-  bool headTilt = false, chinLift = false, towThrust = false;
-  @override
-  _InterventionState createState() => _InterventionState();
-}
-*/
-
-/*class _InterventionState extends State<Intervention> {
-  @override
- List lay(context){
-    return List<Widget>(
-
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 36.0),
-          child: Row(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                    child: Text(
-                      "Head Tilt",
-                    ),
-                    width: Width),
-              ),
-              Checkbox(
-                  value: headTilt,
-                  onChanged: (bool val) {
-                    setState(() {
-                      headTilt = val;
-                    });
-                  }),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 36.0),
-          child: Row(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                    child: Text(
-                      "Chin Lift",
-                    ),
-                    width: Width),
-              ),
-              Checkbox(
-                  value: chinLift,
-                  onChanged: (bool val) {
-                    setState(() {
-                      chinLift = val;
-                    });
-                  }),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 36.0),
-          child: Row(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                    child: Text(
-                      "Toe Thrust",
-                    ),
-                    width: Width),
-              ),
-              Checkbox(
-                  value: towThrust,
-                  onChanged: (bool val) {
-                    setState(() {
-                      towThrust = val;
-                    });
-                  }),
-            ],
-          ),
-        ),
-
-    );
-  }
-}*/

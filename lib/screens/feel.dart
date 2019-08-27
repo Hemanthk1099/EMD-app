@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
 import 'listen.dart';
 import 'look.dart';
+import 'package:pdf/pdf.dart';
+import 'home.dart';
 class AFeel extends StatefulWidget {
   @override
   _AFeelState createState() => _AFeelState();
 }
+bool patency;
 bool v1 = false, v2 =false, v3=false, v4=false;
 bool s1 =false, s2=false, s3=false, s4=false;
 bool man = false;
@@ -28,7 +31,7 @@ class _AFeelState extends State<AFeel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Feel"),
+        title: Text("Airway Feel"),
       ),
       body: ListView(
         children: <Widget>[
@@ -412,6 +415,13 @@ class _AFeelState extends State<AFeel> {
               )
 
             ],
+          ),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
           )
 
 

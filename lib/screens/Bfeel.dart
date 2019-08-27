@@ -3,14 +3,14 @@ import 'package:flutter_range_slider/flutter_range_slider.dart';
 import 'Blook.dart';
 import 'Blisten.dart';
 import 'package:test3/components/button.dart';
+import 'home.dart';
 
 class BFeel extends StatefulWidget {
   @override
   _BFeelState createState() => _BFeelState();
 }
 bool anterior,posterior,fremitus,se,tenderness,slider =false;
-RangeValues tendernessLevel = new RangeValues(1, 12);
-double val =2;
+int tender;
 class _BFeelState extends State<BFeel> {
   @override
   Widget build(BuildContext context) {
@@ -266,11 +266,20 @@ class _BFeelState extends State<BFeel> {
 
           Visibility(
             visible: slider,
-              child: Slider(value: 10,max: 12,min: 1,divisions: 11, onChanged: (double value){
-            setState(() {
-              val = value;
-            });
-              }))
+              child: TextField(
+                onChanged: (String val){
+                  setState(() {
+                    tender = int.parse(val);
+                  });
+                },
+              )),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       )
     );

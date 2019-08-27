@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
 import 'Clisten.dart';
 import 'Clook.dart';
-import 'feel.dart';
+import 'home.dart';
+
 
 class Cfeel extends StatefulWidget {
   @override
@@ -52,7 +53,7 @@ class _CfeelState extends State<Cfeel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Circulatory"),
+        title: Text("Circulatory Feel"),
       ),
       body: ListView(
         children: <Widget>[
@@ -854,7 +855,13 @@ class _CfeelState extends State<Cfeel> {
                 ],
               )
           ),
-
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       ),
 

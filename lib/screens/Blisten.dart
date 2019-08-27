@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
-import 'listen.dart';
 import 'Blook.dart';
 import 'Bfeel.dart';
+import 'home.dart';
 
 class Blisten extends StatefulWidget {
   @override
@@ -39,7 +39,7 @@ class _BlistenState extends State<Blisten> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Feel"),
+        title: Text("Breathing Listen"),
       ),
       body: ListView(
         children: <Widget>[
@@ -646,6 +646,13 @@ class _BlistenState extends State<Blisten> {
               ],
             ),
           ),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       ),
     );

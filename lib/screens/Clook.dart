@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
 import 'Clisten.dart';
-import 'listen.dart';
+import 'home.dart';
 import 'Cfeel.dart';
 class CLook extends StatefulWidget {
   static String id = "breathing";
@@ -236,6 +236,13 @@ class  CLookState extends State<CLook> {
                 ),
               ],
             ),
+            Btn(
+              text: "Home",
+              onPressed: () {
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => new Home()));
+              },
+            )
           ],
         ),
       );

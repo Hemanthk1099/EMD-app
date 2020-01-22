@@ -18,7 +18,7 @@ class _DisplayMewsState extends State<DisplayMews> {
           Expanded(
               child: Container(
                   color: obj.color,
-                  child: Center(child: Text(obj.score.toString())))),
+                  child: Center(child: Text(obj.score.toString(),style: TextStyle(fontSize: 32),)))),
           Btn(
             text: "Home",
             onPressed: () {
@@ -33,8 +33,8 @@ class _DisplayMewsState extends State<DisplayMews> {
 }
 
 class Mews {
-  int score = 56;
-  Color color = Colors.red;
+  int score ;
+  Color color ;
   int pulse, rr, cns, sbp;
   double temp;
 

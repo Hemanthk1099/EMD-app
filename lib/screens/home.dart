@@ -3,9 +3,11 @@ import 'package:test3/components/button.dart';
 import 'airway.dart';
 import 'breathing.dart';
 import 'circulation.dart';
-import 'mews.dart';
+import 'getdata.dart';
 import 'disability.dart';
 import 'exposure.dart';
+import 'summary.dart';
+import 'package:open_file/open_file.dart';
 
 class Home extends StatefulWidget {
   static String id = "home";
@@ -57,14 +59,28 @@ class _HomeState extends State<Home> {
                     new MaterialPageRoute(builder: (context) => new exposure()));
               },
             ),
-            Btn(
-              text: "Mewscore",
-              onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new DisplayMews()));
-              },
-            ),
-
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Btn(
+                    text: "Mewscore",
+                    onPressed: () {
+                      Navigator.push(context,
+                          new MaterialPageRoute(builder: (context) => new GetData()));
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: Btn(
+                    text: "Generate Summary",
+                    onPressed: () {
+                      generateSummary();
+                      OpenFile.open(pathToPdf);
+                    },
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),

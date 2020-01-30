@@ -14,7 +14,7 @@ class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
-
+String PatientName,symptoms;
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
@@ -23,65 +23,80 @@ class _HomeState extends State<Home> {
         title: Text("Home"),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 160),
-        child: ListView(
-          children: <Widget>[
-            Btn(
-              text: "Airway",
-              onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new Airway()));
-              },
-            ),
-            Btn(text: "Breathing",onPressed: (){
-              Navigator.push(
-                  context,
-                  new MaterialPageRoute(
-                      builder: (context) => new Breathe()));
-            },),
-            Btn(text: "Circulation",onPressed: (){
-              Navigator.push(
-                  context,
-                  new MaterialPageRoute(
-                      builder: (context) => new Circulation()));
-            },),
-            Btn(
-              text: "Disability",
-              onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new disability()));
-              },
-            ),
-            Btn(
-              text: "Exposure",
-              onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new exposure()));
-              },
-            ),
-            Row(
-              children: <Widget>[
-                Expanded(
-                  child: Btn(
-                    text: "Mewscore",
-                    onPressed: () {
-                      Navigator.push(context,
-                          new MaterialPageRoute(builder: (context) => new GetData()));
-                    },
+        padding: EdgeInsets.symmetric(vertical: 0),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ListView(
+            children: <Widget>[
+              TextField(decoration: InputDecoration(hintText: "Name of the patient"),
+                onChanged: (String val)
+                {
+                  PatientName = val;
+                }),
+              TextField(decoration: InputDecoration(hintText: "Symtoms"),
+                  keyboardType: TextInputType.multiline,
+                  maxLines: 8,
+                  onChanged: (String val)
+                  {
+                    symptoms = val;
+                  }),
+              Btn(
+                text: "Airway",
+                onPressed: () {
+                  Navigator.push(context,
+                      new MaterialPageRoute(builder: (context) => new Airway()));
+                },
+              ),
+              Btn(text: "Breathing",onPressed: (){
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new Breathe()));
+              },),
+              Btn(text: "Circulation",onPressed: (){
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new Circulation()));
+              },),
+              Btn(
+                text: "Disability",
+                onPressed: () {
+                  Navigator.push(context,
+                      new MaterialPageRoute(builder: (context) => new disability()));
+                },
+              ),
+              Btn(
+                text: "Exposure",
+                onPressed: () {
+                  Navigator.push(context,
+                      new MaterialPageRoute(builder: (context) => new exposure()));
+                },
+              ),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Btn(
+                      text: "Mewscore",
+                      onPressed: () {
+                        Navigator.push(context,
+                            new MaterialPageRoute(builder: (context) => new GetData()));
+                      },
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: Btn(
-                    text: "Generate Summary",
-                    onPressed: () {
-                      generateSummary();
-                      OpenFile.open(pathToPdf);
-                    },
-                  ),
-                )
-              ],
-            )
-          ],
+                  Expanded(
+                    child: Btn(
+                      text: "Generate Summary",
+                      onPressed: () {
+                        generateSummary();
+                        OpenFile.open(pathToPdf);
+                      },
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

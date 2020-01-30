@@ -109,79 +109,7 @@ class _AListenState extends State<AListen> {
                         ],
                       ),
                     ),
-                    /*Visibility(
-                      visible: vis0,
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Head Tilt",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[0][0],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[0][0]= val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Chin Lift",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[0][1],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[0][1] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Jaw Thrust",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[0][2],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[0][2] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )*/
+
 
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -206,79 +134,7 @@ class _AListenState extends State<AListen> {
                         ],
                       ),
                     ),
-         /*Visibility(
-                      visible: vis1,
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Head Tilt",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[1][0],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[1][0]= val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Chin Lift",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[1][1],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[1][1] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Jaw Thrust",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[1][2],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[1][2] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )*/
+
 
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -303,79 +159,7 @@ class _AListenState extends State<AListen> {
                         ],
                       ),
                     ),
-         /*Visibility(
-                      visible: vis2,
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Head Tilt",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[2][0],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[2][0]= val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Chin Lift",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[2][1],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[2][1] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Jaw Thrust",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[2][2],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[2][2] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )*/
+
 
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -400,79 +184,7 @@ class _AListenState extends State<AListen> {
                         ],
                       ),
                     ),
-         /*Visibility(
-                      visible: vis3,
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Head Tilt",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[3][0],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[3][0]= val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Chin Lift",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[3][1],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[3][1] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Jaw Thrust",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[3][2],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[3][2] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),*/
+
 
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -497,79 +209,7 @@ class _AListenState extends State<AListen> {
                         ],
                       ),
                     ),
-                    /*Visibility(
-                      visible: vis4,
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Head Tilt",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[4][0],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[4][0]= val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Chin Lift",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[4][1],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[4][1] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Jaw Thrust",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[4][2],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[4][2] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )*/
+
 
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -584,89 +224,12 @@ class _AListenState extends State<AListen> {
                               onChanged: (bool val) {
                                 setState(() {
                                   h = val;
-                                  /*if (val == true) {
-                                    vis5 = true;
-                                  } else {
-                                    vis5 = false;
-                                  }*/
                                 });
                               }),
                         ],
                       ),
                     ),
-                    /*Visibility(
-                      visible: vis5,
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Head Tilt",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[5][0],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[5][0]= val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Chin Lift",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[5][1],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[5][1] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      child: Text(
-                                        "Jaw Thrust",
-                                      ),
-                                      width: Width),
-                                ),
-                                Checkbox(
-                                    value: intervention[5][2],
-                                    onChanged: (bool val) {
-                                      setState(() {
-                                        intervention[5][2] = val;
-                                      });
-                                    }),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )*/
+
 
                     Padding(
                       padding: const EdgeInsets.all(8.0),

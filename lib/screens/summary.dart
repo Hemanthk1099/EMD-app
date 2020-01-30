@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart' as prefix0;
+import 'package:test3/screens/home.dart';
 
 import 'look.dart';
 import 'package:pdf/pdf.dart';
@@ -45,22 +46,13 @@ void generateSummary() async {
                     .copyWith(color: PdfColors.grey)));
       },
       build: (Context context) => [
-            if (fb == true)
+        get(12,"Name : "+PatientName,FontWeight.normal),
+        get(12,"Symptoms : "+symptoms,FontWeight.normal),
+        SizedBox(height: 5),
+        get(15, "AIRWAY", FontWeight.bold),
               Column(children: [
-                Row(children: [
-                  get(18, "Foriegn Bodies", FontWeight.bold),
-                ]),
                 SizedBox(height: 5),
-
                   Column(children: [
-                    Row(children: [
-                      Expanded(
-                        child: get(15, "Symptoms", FontWeight.bold),
-                      ),
-                      Expanded(
-                        child: get(15, "Interventions", FontWeight.bold),
-                      ),
-                    ]),
                     Row(
                       children: [
                         Expanded(
@@ -70,14 +62,10 @@ void generateSummary() async {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                               SizedBox(height: 4),
-                              if (secretions == true)
-                                get(12, "Secretions", FontWeight.normal),
-                              if (vomiting == true)
-                                get(12, "Vomiting", FontWeight.normal),
-                              if (blood == true)
-                                get(12, "Blood", FontWeight.normal),
-                              if (tooth == true)
-                                get(12, "Tooth", FontWeight.normal),
+                             getLabel( "Secretions", secretions),
+                                  getLabel( "Vomiting", vomiting),
+                                  getLabel( "Blood", blood),
+                                  getLabel( "Tooth", tooth),
                             ])),
                         Expanded(
                             child: Column(
@@ -86,9 +74,7 @@ void generateSummary() async {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                               SizedBox(height: 4),
-                              if (suction == true)
-                                get(12, "Suction", FontWeight.normal),
-                              if (fbo != "")
+                                  getLabel( "Suction", suction),
                                 get(12, "Further Interventions :" + fbo,
                                     FontWeight.normal)
                             ])),
@@ -96,19 +82,6 @@ void generateSummary() async {
                     )
                   ]),
                 SizedBox(height: 15),
-                Row(children: [
-                  if (st == true) get(18, "Soft Tissues", FontWeight.bold),
-                ]),
-                SizedBox(height: 5),
-                if (st == true)
-                  Row(children: [
-                    Expanded(
-                      child: get(15, "Symptoms", FontWeight.bold),
-                    ),
-                    Expanded(
-                      child: get(15, "Interventions", FontWeight.bold),
-                    ),
-                  ]),
                 Row(
                   children: [
                     Expanded(
@@ -117,12 +90,10 @@ void generateSummary() async {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                           SizedBox(height: 4),
-                          if (swelling == true)
-                            get(12, "Swelling", FontWeight.normal),
-                          if (deformity == true)
-                            get(12, "Deformity", FontWeight.normal),
-                          if (injuries == true)
-                            get(12, "Injuries", FontWeight.normal),
+
+                            getLabel( "Swelling",swelling),
+                            getLabel("Deformity", deformity),
+                            getLabel( "Injuries", injuries),
                         ])),
                     Expanded(
                         child: Column(
@@ -130,13 +101,9 @@ void generateSummary() async {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                           SizedBox(height: 4),
-                          if (headtilt == true)
-                            get(12, "Head Tilt", FontWeight.normal),
-                          if (chinlift)
-                            get(12, "Chin Lift ", FontWeight.normal),
-                          if (jawthrust == true)
-                            get(12, "Jaw Thrust", FontWeight.normal),
-                          if (sto != "")
+                            getLabel("Head Tilt", headtilt),
+                            getLabel( "Chin Lift ", chinlift),
+                            getLabel("Jaw Thrust", jawthrust),
                             get(12, "Further Interventions :" + sto,
                                 FontWeight.normal)
                         ])),
@@ -156,4 +123,12 @@ Widget get(double size, String text, FontWeight type) {
         fontSize: size,
         fontWeight: type,
       )));
+}
+Widget getLabel(String text,bool yesNo)
+{
+  if(yesNo)
+    text +=" : yes";
+  else
+    text += " : no";
+  return get(12,text,FontWeight.normal);
 }
